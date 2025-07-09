@@ -1,0 +1,344 @@
+{
+  "sourceLanguage" : "ko",
+  "strings" : {
+    "" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "\"A Question Of Thanks\"" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\"A Question Of Thanks\""
+          }
+        }
+      }
+    },
+    "%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        }
+      }
+    },
+    "%lld answer%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld answer%2$@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld answer%2$@"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "Done" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        }
+      }
+    },
+    "Enter Answer" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter Answer"
+          }
+        }
+      }
+    },
+    "Next" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next"
+          }
+        }
+      }
+    },
+    "No answer" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No answer"
+          }
+        }
+      }
+    },
+    "Select a question" : {
+      "comment" : "Select a question",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select a question"
+          }
+        }
+      }
+    },
+    "가족 중 한 사람에게 고마웠던 점은?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What did you appreciate about a family member?"
+          }
+        }
+      }
+    },
+    "나 자신에게 칭찬하고 싶은 점은?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What are you proud of yourself for today?"
+          }
+        }
+      }
+    },
+    "나를 위해 수고한 과거의 나에게 감사하고 싶은 것은?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What do you thank your past self for?"
+          }
+        }
+      }
+    },
+    "내 건강 중 감사하게 느껴지는 부분은?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What part of your health are you grateful for today?"
+          }
+        }
+      }
+    },
+    "삭제" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        }
+      }
+    },
+    "삭제하면 복구할 수 없습니다." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This action cannot be undone."
+          }
+        }
+      }
+    },
+    "예상치 못한 좋은 일이 있었다면?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Did something unexpectedly good happen today?"
+          }
+        }
+      }
+    },
+    "오늘 깨달은 소중한 교훈은?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What valuable lesson did you learn today?"
+          }
+        }
+      }
+    },
+    "오늘 대화했던 사람 중 고마운 사람이 있었나요?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Who are you thankful to have spoken with today?"
+          }
+        }
+      }
+    },
+    "오늘 맛있게 먹은 음식 중 감사한 것은?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What food did you enjoy most today?"
+          }
+        }
+      }
+    },
+    "오늘 무사히 하루를 보내서 감사한 점은?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What made you feel grateful just for today?"
+          }
+        }
+      }
+    },
+    "오늘 하루 중 가장 감사했던 순간은?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What moment made you feel most grateful?"
+          }
+        }
+      }
+    },
+    "원하는 요일에 앱을 열고, 감사질문에 답해보세요.\n매일 써야한다는 부담없이, 천천히 쌓아가면됩니다." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start your own gratitude journal\nSimple questions will help guide your reflections"
+          }
+        }
+      }
+    },
+    "자연이나 날씨 속에서 감사함을 느낀 순간은?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Did nature or the weather make you feel thankful?"
+          }
+        }
+      }
+    },
+    "전체 보기" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See All List"
+          }
+        }
+      }
+    },
+    "정말 삭제하시겠습니까?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you sure you want to delete this?"
+          }
+        }
+      }
+    },
+    "좋아하는 취미나 활동을 할 수 있어서 감사한 점은?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What hobby or activity brought you joy?"
+          }
+        }
+      }
+    },
+    "직장/학교에서 받은 작은 배려는?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What kindness did you receive today?"
+          }
+        }
+      }
+    },
+    "질문을 선택하세요" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select a question"
+          }
+        }
+      }
+    },
+    "최근에 감동한 작은 친절은?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What small kindness touched you recently?"
+          }
+        }
+      }
+    },
+    "취소" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancle"
+          }
+        }
+      }
+    },
+    "친구 덕분에 웃었던 순간은?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Did a friend make you smile today?"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

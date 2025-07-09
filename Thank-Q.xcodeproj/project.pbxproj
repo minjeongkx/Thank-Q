@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		92A253AC2E1E310800F6759D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 92A253AB2E1E310800F6759D /* Localizable.xcstrings */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		92159FD42DB36A700045B7EE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		92159FC32DB36A6F0045B7EE /* Thank-Q.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thank-Q.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92159FD32DB36A700045B7EE /* Thank-QTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thank-QTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92159FDD2DB36A700045B7EE /* Thank-QUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thank-QUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92A253AB2E1E310800F6759D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -93,6 +98,7 @@
 		92159FBA2DB36A6F0045B7EE = {
 			isa = PBXGroup;
 			children = (
+				92A253AB2E1E310800F6759D /* Localizable.xcstrings */,
 				9255E5972E02E4220005412B /* Fonts */,
 				92159FC52DB36A6F0045B7EE /* Thank-Q */,
 				92159FD62DB36A700045B7EE /* Thank-QTests */,
@@ -233,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A253AC2E1E310800F6759D /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
