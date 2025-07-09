@@ -31,39 +31,18 @@ struct ButtonView: View {
         .padding(.horizontal, 25)
         .padding(.top, 10)
         .simultaneousGesture(TapGesture().onEnded { // 탭 완료시 실행할 코드
-            saveRecord(from: entry) // 기록저장
+            RecordManager.shared.saveRecord(from: entry) // 기록저장
             onSave?() //입력창 초기화, 질문 리셋
         })
     }
-    
-    
-    // ✅ 저장함수: next 버튼 누르면 사용자가 작성한 답변을 기존 기록에 추가 및 저장
-    func saveRecord(from entry: DayEntry) {
-        // 답변이 비어있으면 저장하지 않고 종료
-        guard !entry.inputText.isEmpty else { return }
-
-        var records = loadSavedRecords()//저장된 기록 불러옴
-        
-        
-        
-        let newRecord = Record( //현재 입력값으로 새 Record 생성
-            id: UUID(),
-            date: Date(),
-            day: entry.day,
-            question: questions[entry.pickedItem],
-            answer: entry.inputText
-        )
-
-        records.append(newRecord)  // 기존 기록 배열에 새 기록 추가
-
-        // 전체 records를 JSON 형식으로 인코딩하고 UserDefaults에 저장
-        if let encoded = try? JSONEncoder().encode(records) {
-            UserDefaults.standard.set(encoded, forKey: "SavedRecords")
-        }
-    }
-
 }
 
-#Preview {
+#Preview("🇰🇷 Korean") {
     ContentView()
+        .environment(\.locale, .init(identifier: "ko"))
+}
+
+#Preview("🇺🇸 English") {
+    ContentView()
+        .environment(\.locale, .init(identifier: "en"))
 }

@@ -88,65 +88,30 @@ struct AnswerDetailView: View {
                 Button("삭제", role: .destructive) {
                     withAnimation(nil) {
                         if let record = recordToDelete { //if let: 옵셔널 안전하기 꺼내기 위해서 사용
-                            delete(record)
+                            RecordManager.shared.delete(record, from: &records)
                         }
                     }
                 }
                 Button("취소", role: .cancel) { } //취소하면 다른동작 필요없음
             } message: {
-                Text(NSLocalizedString("삭제하면 복구할 수 없습니다.", comment: ""))
+                Text("삭제하면 복구할 수 없습니다.")
             }
         }
         .onAppear {
-            loadRecords()
+            records = RecordManager.shared.loadRecords()
         }
         .sheet(item: $recordToEdit) { record in
             EditAnswerView(
-                record: binding(for: record), //바인딩으로 넘겨야 수정시 반영됨
-                onUpdate: updateRecord //클로저 형태로 전달
+                record: RecordManager.shared.binding(for: record, in: $records), //바인딩으로 넘겨야 수정시 반영됨
+                onUpdate: { updatedRecord in
+                    RecordManager.shared.updateRecord(updatedRecord, in: &records)
+                } //클로저 형태로 전달
             )
         }
-    }
-    
-    // ✅ 데이터 불러오기 함수: UserDefaults에 저장된 데이터를 불러와 records 배열에 복원
-    private func loadRecords() {
-        records = loadSavedRecords()
-    }
-    
-    // ✅ 삭제 함수: 선택한 Record를 배열과 UserDefaults에서 삭제
-    // records 배열에서 해당 record의 id와 일치하는 항목 제거
-    // 변경된 records 배열을 JSON 형식으로 인코딩
-    private func delete(_ record: Record) {
-        records.removeAll { $0.id == record.id }
-        if let encoded = try? JSONEncoder().encode(records) {
-            UserDefaults.standard.set(encoded, forKey: "SavedRecords")
-        }
-    }
-    
-    // ✅ 업데이트 함수: 수정된 Record를 기존 records 배열에 반영, UserDefaults에 저장
-    // 같은 id를 가진 Record가 배열에서 몇 번째에 있는지 찾고
-    // 해당 위치의 데이터를 수정된 Record로 바꿈
-    // 전체 records 배열을 다시 JSON으로 인코딩해서 UserDefaults에 저장
-    private func updateRecord(_ updatedRecord: Record) {
-        if let index = records.firstIndex(where: { $0.id == updatedRecord.id }) {
-            records[index] = updatedRecord
-            if let encoded = try? JSONEncoder().encode(records) {
-                UserDefaults.standard.set(encoded, forKey: "SavedRecords")
-            }
-        }
-    }
-
-    // 특정 Record를 바인딩(Binding) 형태로 찾아서 반환하는 함수
-    // records 배열 안에서 id가 같은 항목을 찾고, 해당 위치의 데이터를 바인딩으로 반환함, 수정 가능한 화면에서 사용
-    private func binding(for record: Record) -> Binding<Record> {
-        guard let index = records.firstIndex(where: { $0.id == record.id }) else {
-            fatalError("Record not found") // 찾지 못하면 앱을 멈추게 함 (개발 중 에러 확인용)
-        }
-        return $records[index]
     }
 }
     
     
 #Preview {
-    AnswerDetailView(day: "Saturday")
+    AnswerDetailView(day: "Wednesday")
 }

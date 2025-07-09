@@ -47,7 +47,7 @@ struct AnswerListView: View {
                 .scrollContentBackground(.hidden)
                 .toolbar {
                     ToolbarItem(placement: .principal) {
-                            Text("전체보기")
+                            Text("전체 보기")
                             .font(.sfsemi17)
                                 .foregroundStyle(.deepbrown)
                     }
@@ -55,19 +55,10 @@ struct AnswerListView: View {
                 
                 .onAppear{
                     //데이터불러오기
-                    loadRecords()
+                    listRecords = RecordManager.shared.loadRecords()
                 }
             }
         }
-        
-    }
-
-
-    
-    
-    //데이터불러오기 함수
-    private func loadRecords() {
-        listRecords = loadSavedRecords()
     }
 }
 #Preview {

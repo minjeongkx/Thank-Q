@@ -15,7 +15,7 @@ struct AnswerCountView: View {
     var body: some View {
         HStack {
             Image(systemName: "applepencil.tip")
-            Text("\(allRecords.count)")
+            Text("\(allRecords.count) Days of Thanks")
         } .foregroundColor(didAnswerToday ? Color("deepbrown") : .gray)
         .onAppear {
             loadAnswer()
@@ -23,7 +23,7 @@ struct AnswerCountView: View {
     }
 
     func loadAnswer() {
-        let decoded = loadSavedRecords() //저장된 답변불러오기
+        let decoded = RecordManager.shared.loadRecords()
         allRecords = decoded
 
         let formatter = DateFormatter()//날짜를 문자열로 변환

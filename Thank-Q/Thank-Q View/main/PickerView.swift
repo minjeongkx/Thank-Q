@@ -19,13 +19,13 @@ struct PickerView: View {
                     Button(action: {
                         entry.pickedItem = index
                     }) {
-                        Text(questions[index])
+                        Text(questions[index].localized)
                             .font(.footnote)
                     }
                 }
             } label: {
                 HStack(spacing: 4) {
-                   Text(questions[entry.pickedItem])
+                   Text(questions[entry.pickedItem].localized)
                         .font(.footnote)
                     Image(systemName: "chevron.up.chevron.down")
                         .font(.sfsemi12)
