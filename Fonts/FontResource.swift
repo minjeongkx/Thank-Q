@@ -56,4 +56,37 @@ extension Font {
     static var sfreg17: Font {
         return .sfpro(type: .regular, size: 17)
     }
+    
+    //MARK: Shrink hand
+    enum Shrink {
+        case regular
+        var value: String {
+            switch self {
+                /// Shrink
+            case .regular:
+                return "Shrikhand-Regular"
+            }
+        }
+    }
+    static func shrink(type: Shrink, size: CGFloat) -> Font {
+        return .custom(type.value, size: size)
+    }
+    
+    static var shrink12: Font {
+        return .shrink(type: .regular, size: 12)
+    }
+    static var shrink15: Font {
+        return .shrink(type: .regular, size: 15)
+    }
+    static var shrink16: Font {
+        return .shrink(type: .regular, size: 16)
+    }
+    static var shrink48: Font {
+        return .shrink(type: .regular, size: 48)
+    }
+    static var shrink50: Font {
+        return .shrink(type: .regular, size: 50)
+    }
+
+
 }

@@ -11,13 +11,14 @@ import SwiftUI
 
 class RecordManager {
     static let shared = RecordManager()
+    private let sharedDefaults = UserDefaults(suiteName: "group.com.minjeong.C2")!
     
     private init() {}
 
     // MARK: - Load
     /// UserDefaults에서 저장된 데이터를 불러와 [Record] 배열로 반환
     func loadRecords() -> [Record] {
-        if let data = UserDefaults.standard.data(forKey: "SavedRecords"),
+        if let data = sharedDefaults.data(forKey: "SavedRecords"),
            let decoded = try? JSONDecoder().decode([Record].self, from: data) {
             return decoded
         }
@@ -45,7 +46,7 @@ class RecordManager {
         records.append(newRecord)
         
         if let encoded = try?  JSONEncoder().encode(records) {
-            UserDefaults.standard.set(encoded, forKey: "SavedRecords")
+            sharedDefaults.set(encoded, forKey: "SavedRecords")
         }
     }
 
@@ -54,7 +55,7 @@ class RecordManager {
     func delete(_ record: Record, from records: inout [Record]) {
         records.removeAll { $0.id == record.id }
         if let encoded = try? JSONEncoder().encode(records) {
-            UserDefaults.standard.set(encoded, forKey: "SavedRecords")
+            sharedDefaults.set(encoded, forKey: "SavedRecords")
         }
     }
 
@@ -64,7 +65,7 @@ class RecordManager {
         if let index = records.firstIndex(where: { $0.id == updatedRecord.id }) {
             records[index] = updatedRecord
             if let encoded = try? JSONEncoder().encode(records) {
-                UserDefaults.standard.set(encoded, forKey: "SavedRecords")
+                sharedDefaults.set(encoded, forKey: "SavedRecords")
             }
         }
     }

@@ -48,7 +48,6 @@ struct AnswerDetailView: View {
                             // ForEach{record in}: 정렬된 기록들을 하나씩 꺼내서 record이름의 뷰로 표시
                             // filter: records 배열에서 현재 요일(day)과 같은 항목만 필터링
                             // sorted(by:): 필터링된 결과를 날짜(date) 기준으로 최신순 정렬
-                            
                             ForEach(records.filter { $0.day == day }.sorted(by: { $0.date > $1.date })) { record in
                                 VStack(alignment: .leading, spacing: 8) {
                                     Text(record.date, style: .date)

@@ -15,8 +15,10 @@ struct AnswerCountView: View {
     var body: some View {
         HStack {
             Image(systemName: "applepencil.tip")
-            Text("\(allRecords.count) Days of Thanks")
-        } .foregroundColor(didAnswerToday ? Color("deepbrown") : .gray)
+            Text("\(allRecords.count) Moments of Thanks")
+        }
+        .foregroundColor(didAnswerToday ? Color("deepbrown") : .gray)
+        .font(.sfreg14)
         .onAppear {
             loadAnswer()
         }

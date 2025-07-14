@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		92A253AC2E1E310800F6759D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 92A253AB2E1E310800F6759D /* Localizable.xcstrings */; };
+		92B5A2A82E1FBADF00E90D74 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B5A2A72E1FBADF00E90D74 /* WidgetKit.framework */; };
+		92B5A2AA2E1FBADF00E90D74 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B5A2A92E1FBADF00E90D74 /* SwiftUI.framework */; };
+		92B5A2BB2E1FBAE000E90D74 /* thankq_wigetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 92B5A2A52E1FBADF00E90D74 /* thankq_wigetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		92E4615F2E23E912009C6352 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 92A253AB2E1E310800F6759D /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,13 +29,38 @@
 			remoteGlobalIDString = 92159FC22DB36A6F0045B7EE;
 			remoteInfo = "Thank-Q";
 		};
+		92B5A2B92E1FBAE000E90D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92159FBB2DB36A6F0045B7EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92B5A2A42E1FBADF00E90D74;
+			remoteInfo = thankq_wigetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		92B5A2BC2E1FBAE000E90D74 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				92B5A2BB2E1FBAE000E90D74 /* thankq_wigetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		92159FC32DB36A6F0045B7EE /* Thank-Q.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thank-Q.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92159FD32DB36A700045B7EE /* Thank-QTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thank-QTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92159FDD2DB36A700045B7EE /* Thank-QUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thank-QUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A253AB2E1E310800F6759D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		92B5A2A52E1FBADF00E90D74 /* thankq_wigetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = thankq_wigetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		92B5A2A72E1FBADF00E90D74 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		92B5A2A92E1FBADF00E90D74 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		92B5A2C22E1FBCE700E90D74 /* thankq_wigetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = thankq_wigetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -42,6 +71,35 @@
 			);
 			target = 92159FC22DB36A6F0045B7EE /* Thank-Q */;
 		};
+		92B5A2C02E1FBAE000E90D74 /* Exceptions for "thankq_wiget" folder in "thankq_wigetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 92B5A2A42E1FBADF00E90D74 /* thankq_wigetExtension */;
+		};
+		92B5A2C42E1FBDF900E90D74 /* Exceptions for "Thank-Q" folder in "thankq_wigetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/DayEntry.swift,
+				Models/Record.swift,
+				Models/RecordManager.swift,
+				Utils/questions.swift,
+				Utils/todayDay.swift,
+			);
+			target = 92B5A2A42E1FBADF00E90D74 /* thankq_wigetExtension */;
+		};
+		92E461582E23D09F009C6352 /* Exceptions for "Fonts" folder in "thankq_wigetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				FontResource.swift,
+				"SFProText-Bold.otf",
+				"SFProText-Regular.otf",
+				"SFProText-Semibold.otf",
+				"Shrikhand-Regular.otf",
+			);
+			target = 92B5A2A42E1FBADF00E90D74 /* thankq_wigetExtension */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -49,6 +107,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				928910C52DB743B30050F56C /* Exceptions for "Thank-Q" folder in "Thank-Q" target */,
+				92B5A2C42E1FBDF900E90D74 /* Exceptions for "Thank-Q" folder in "thankq_wigetExtension" target */,
 			);
 			path = "Thank-Q";
 			sourceTree = "<group>";
@@ -65,7 +124,18 @@
 		};
 		9255E5972E02E4220005412B /* Fonts */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				92E461582E23D09F009C6352 /* Exceptions for "Fonts" folder in "thankq_wigetExtension" target */,
+			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		92B5A2AB2E1FBADF00E90D74 /* thankq_wiget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				92B5A2C02E1FBAE000E90D74 /* Exceptions for "thankq_wiget" folder in "thankq_wigetExtension" target */,
+			);
+			path = thankq_wiget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -92,17 +162,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92B5A2A22E1FBADF00E90D74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92B5A2AA2E1FBADF00E90D74 /* SwiftUI.framework in Frameworks */,
+				92B5A2A82E1FBADF00E90D74 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		92159FBA2DB36A6F0045B7EE = {
 			isa = PBXGroup;
 			children = (
+				92B5A2C22E1FBCE700E90D74 /* thankq_wigetExtension.entitlements */,
 				92A253AB2E1E310800F6759D /* Localizable.xcstrings */,
 				9255E5972E02E4220005412B /* Fonts */,
 				92159FC52DB36A6F0045B7EE /* Thank-Q */,
 				92159FD62DB36A700045B7EE /* Thank-QTests */,
 				92159FE02DB36A700045B7EE /* Thank-QUITests */,
+				92B5A2AB2E1FBADF00E90D74 /* thankq_wiget */,
+				92B5A2A62E1FBADF00E90D74 /* Frameworks */,
 				92159FC42DB36A6F0045B7EE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,8 +195,18 @@
 				92159FC32DB36A6F0045B7EE /* Thank-Q.app */,
 				92159FD32DB36A700045B7EE /* Thank-QTests.xctest */,
 				92159FDD2DB36A700045B7EE /* Thank-QUITests.xctest */,
+				92B5A2A52E1FBADF00E90D74 /* thankq_wigetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		92B5A2A62E1FBADF00E90D74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92B5A2A72E1FBADF00E90D74 /* WidgetKit.framework */,
+				92B5A2A92E1FBADF00E90D74 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,10 +219,12 @@
 				92159FBF2DB36A6F0045B7EE /* Sources */,
 				92159FC02DB36A6F0045B7EE /* Frameworks */,
 				92159FC12DB36A6F0045B7EE /* Resources */,
+				92B5A2BC2E1FBAE000E90D74 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				92B5A2BA2E1FBAE000E90D74 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				92159FC52DB36A6F0045B7EE /* Thank-Q */,
@@ -189,6 +283,28 @@
 			productReference = 92159FDD2DB36A700045B7EE /* Thank-QUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		92B5A2A42E1FBADF00E90D74 /* thankq_wigetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92B5A2BF2E1FBAE000E90D74 /* Build configuration list for PBXNativeTarget "thankq_wigetExtension" */;
+			buildPhases = (
+				92B5A2A12E1FBADF00E90D74 /* Sources */,
+				92B5A2A22E1FBADF00E90D74 /* Frameworks */,
+				92B5A2A32E1FBADF00E90D74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				92B5A2AB2E1FBADF00E90D74 /* thankq_wiget */,
+			);
+			name = thankq_wigetExtension;
+			packageProductDependencies = (
+			);
+			productName = thankq_wigetExtension;
+			productReference = 92B5A2A52E1FBADF00E90D74 /* thankq_wigetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -210,6 +326,9 @@
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 92159FC22DB36A6F0045B7EE;
 					};
+					92B5A2A42E1FBADF00E90D74 = {
+						CreatedOnToolsVersion = 16.2;
+					};
 				};
 			};
 			buildConfigurationList = 92159FBE2DB36A6F0045B7EE /* Build configuration list for PBXProject "Thank-Q" */;
@@ -230,6 +349,7 @@
 				92159FC22DB36A6F0045B7EE /* Thank-Q */,
 				92159FD22DB36A700045B7EE /* Thank-QTests */,
 				92159FDC2DB36A700045B7EE /* Thank-QUITests */,
+				92B5A2A42E1FBADF00E90D74 /* thankq_wigetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +377,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92B5A2A32E1FBADF00E90D74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E4615F2E23E912009C6352 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -281,6 +409,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92B5A2A12E1FBADF00E90D74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,6 +428,11 @@
 			isa = PBXTargetDependency;
 			target = 92159FC22DB36A6F0045B7EE /* Thank-Q */;
 			targetProxy = 92159FDE2DB36A700045B7EE /* PBXContainerItemProxy */;
+		};
+		92B5A2BA2E1FBAE000E90D74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92B5A2A42E1FBADF00E90D74 /* thankq_wigetExtension */;
+			targetProxy = 92B5A2B92E1FBAE000E90D74 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -423,6 +563,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Thank-Q/Thank-Q.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
@@ -460,6 +601,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Thank-Q/Thank-Q.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
@@ -564,6 +706,72 @@
 			};
 			name = Release;
 		};
+		92B5A2BD2E1FBAE000E90D74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = thankq_wigetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 5BT826RV67;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = thankq_wiget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = thankq_wiget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minjeong.Thank-Q.thankq-wiget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		92B5A2BE2E1FBAE000E90D74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = thankq_wigetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 5BT826RV67;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = thankq_wiget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = thankq_wiget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minjeong.Thank-Q.thankq-wiget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -599,6 +807,15 @@
 			buildConfigurations = (
 				92159FEE2DB36A700045B7EE /* Debug */,
 				92159FEF2DB36A700045B7EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92B5A2BF2E1FBAE000E90D74 /* Build configuration list for PBXNativeTarget "thankq_wigetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92B5A2BD2E1FBAE000E90D74 /* Debug */,
+				92B5A2BE2E1FBAE000E90D74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

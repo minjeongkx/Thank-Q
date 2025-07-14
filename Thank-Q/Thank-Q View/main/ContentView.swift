@@ -7,10 +7,12 @@
 
 import SwiftUI
 
+// MARK: - ContentView
 struct ContentView: View {
     
     @State private var dayEntries: [DayEntry] = initialDayEntries
     
+    // MARK: - UI Components
     var body: some View {
         NavigationStack {
             ZStack {
@@ -18,12 +20,15 @@ struct ContentView: View {
                 
                 VStack {
                     ScrollView{
+                        // MARK: - Header Section
                         VStack(spacing: 8) {
-                        //    타이틀 및 앱 설명
-                            Image("title")
+
+                            Text("Thank-Q")
+                                .font(.shrink50)
+                                .kerning(5)
                                 .padding(.top, 20)
                                 .padding(.bottom, 15)
-                                .bold()
+                              
                             Text("\"A Question Of Thanks\"")
                                 .bold()
                                 .font(.subheadline)
@@ -38,8 +43,7 @@ struct ContentView: View {
                             .frame(maxWidth: .infinity)
                             .padding(.init(top: 20, leading: 25, bottom: 40, trailing: 25))
                         
-                        //오늘요일 나오기
-                        //바인딩 타입의 값은 외부값 묶어서 참조이므로 wrappedValue로 실제값 접근
+                        // MARK: - Today Entry Section
                         if let entryBinding = $dayEntries.first(where: { $0.wrappedValue.day == todayDay() }) {
                             VStack(alignment: .leading, spacing: 10) {
                                 HStack{
@@ -62,7 +66,7 @@ struct ContentView: View {
                                     .padding(.trailing, 39)
                                     
                                 }
-                                //질문 및 입력상자 구성
+                                // MARK: - Question & Answer Input
                                 VStack(alignment: .leading, spacing: 1) {
                                     
                                     //질문 픽커뷰
@@ -92,8 +96,7 @@ struct ContentView: View {
                                 .shadow(color: Color.black.opacity(0.2), radius: 15, x: 0, y: 4)
                                 .padding(.horizontal, 25)
                                 
-                                //next 버튼 뷰 구현
-                            
+                                // MARK: - Next Button
                              ButtonView(entry: entryBinding) {
                                       if let index = dayEntries.firstIndex(where: { $0.day == entryBinding.wrappedValue.day }) { //클로저
                                           dayEntries[index].inputText = "" //텍스트 초기화로 되돌리기
@@ -104,6 +107,7 @@ struct ContentView: View {
                         }
                         
                     }
+                    // MARK: - Answer Count
                     AnswerCountView()
                 }
             }

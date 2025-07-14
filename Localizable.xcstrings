@@ -57,6 +57,9 @@
         }
       }
     },
+    "%lld Moments of Thanks" : {
+
+    },
     "Cancel" : {
       "localizations" : {
         "en" : {
@@ -87,6 +90,12 @@
         }
       }
     },
+    "Moment of thanks" : {
+
+    },
+    "New" : {
+
+    },
     "Next" : {
       "localizations" : {
         "en" : {
@@ -107,6 +116,9 @@
         }
       }
     },
+    "Q" : {
+
+    },
     "Select a question" : {
       "comment" : "Select a question",
       "extractionState" : "manual",
@@ -115,6 +127,19 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Select a question"
+          }
+        }
+      }
+    },
+    "Thank-Q" : {
+
+    },
+    "Thank-Q 바로가기 위젯을 추가하세요!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add a Thank-Q shortcut widget!"
           }
         }
       }
