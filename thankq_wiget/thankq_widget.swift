@@ -124,11 +124,13 @@ struct thankq_wigetEntryView : View {
                     HStack(spacing: 5) {
                         ForEach(0..<7) { index in
                             let weekdaySymbol = weekdayInitials[index]
+                            let now = Date()
+                            let currentWeek = calendar.dateInterval(of: .weekOfYear, for: now)
                             let hasAnswer = records.contains { record in
+                                guard let week = currentWeek else { return false }
                                 let recordWeekday = calendar.component(.weekday, from: record.date)
-                                // Calendar weekday: Sunday = 1, Monday = 2, ..., Saturday = 7
-                                let mappedIndex = (recordWeekday + 6) % 7 // map Sunday = 0, Monday = 1, ..., Saturday = 6
-                                return mappedIndex == index
+                                let mappedIndex = (recordWeekday + 6) % 7
+                                return mappedIndex == index && week.contains(record.date)
                             }
                             
                             VStack {
